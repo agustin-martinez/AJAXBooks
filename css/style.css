@@ -13,16 +13,45 @@ body {
   background: black;
 }
 header {
+  background: url(../img/ajax.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   font-family: "Major Mono Display", monospace;
   text-align: center;
+  align-items: center;
   color: #ffffff;
-  background: #303030;
   padding: 1em 2em 1em 2em;
 }
 header h1 {
   font-weight: bold;
+}
+input[type="text"] {
+  text-align: center;
+  align-items: center;
+  font-family: "Solway", serif;
+  color: #303030;
+  height: 30px;
+  outline: none;
+  border-color: #303030;
+  margin: 0.6em 8em 0.6em 0em;
+  font-size: 14px;
+
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+
+  margin-top: 14px;
+  background: #eee;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+}
+input[type="submit"] {
+}
+.SearchTextbox {
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
 }
 main {
   background: url(../img/background.svg);
@@ -36,7 +65,7 @@ article {
   margin: 5%;
 }
 section {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 0.9em;
@@ -54,7 +83,7 @@ article h1 {
   margin: 1em;
   padding: 1.5em;
   background: #303030;
-  border: 0.5px solid #FFFFFF;
+  border: 0.5px solid #ffffff;
 }
 article p {
   font-family: "Solway", serif;
@@ -71,15 +100,18 @@ article span {
   font-family: "Solway", serif;
 }
 footer {
+  background: url(../img/ajax.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   font-family: "Major Mono Display", monospace;
   font-size: 0.9em;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
   justify-items: center;
-  padding: 1em;
+  padding: 2em;
   color: #ffffff;
-  background: #303030;
 }
 footer img {
   width: 100%;
@@ -95,7 +127,13 @@ footer img {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
+  header {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  header h1 {
+    margin-bottom: 0.5em;
+  }
   article {
     grid-template-columns: 1fr;
   }
@@ -104,5 +142,13 @@ footer img {
   }
   footer * {
     padding-top: 0.6em;
+  }
+  input[type="text"] {
+    margin: 1em;
+  }
+}
+@media screen and (max-width: 800px) {
+  input[type="text"] {
+    margin: 0.5em;
   }
 }
