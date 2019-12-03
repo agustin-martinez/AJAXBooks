@@ -35,7 +35,6 @@ input[type="text"] {
   color: #303030;
   height: 30px;
   outline: none;
-  border-color: #303030;
   margin: 0.6em 8em 0.6em 0em;
   font-size: 14px;
 
@@ -44,8 +43,8 @@ input[type="text"] {
 
   margin-top: 14px;
   background: #eee;
-  border: 2px solid #303030bb;
-  border-radius: 0.2px;
+  border: 1px solid #303030bb;
+  border-radius: 2px;
 }
 /* input[type="submit"] {
 } */
