@@ -23,10 +23,10 @@ header {
   text-align: center;
   align-items: center;
   color: #ffffff;
-  padding: 1em 2em 1em 2em;
+  padding: 2%;
 }
-header h1 {
-  font-weight: bold;
+.title {
+  font-weight: 900;
 }
 input[type="text"] {
   text-align: center;
@@ -44,11 +44,11 @@ input[type="text"] {
 
   margin-top: 14px;
   background: #eee;
-  border: 1px solid #e5e5e5;
-  border-radius: 2px;
+  border: 2px solid #303030bb;
+  border-radius: 0.2px;
 }
-input[type="submit"] {
-}
+/* input[type="submit"] {
+} */
 .SearchTextbox {
   transition-duration: 0.2s;
   transition-timing-function: ease-in;
@@ -56,13 +56,14 @@ input[type="submit"] {
 main {
   background: url(../img/background.svg);
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
-  background-position: top;
+  margin: 3% 0 3% 0;
 }
 article {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: 5%;
+  margin: 2% 3% 2% 3%;
 }
 section {
   display: flex;
@@ -72,6 +73,7 @@ section {
   padding: 10%;
   text-align: center;
   color: whitesmoke;
+  margin-bottom: 2em;
 }
 article img {
   width: 125px;
@@ -80,24 +82,28 @@ article img {
 article h1 {
   font-family: "Solway", serif;
   font-weight: 200;
-  margin: 1em;
-  padding: 1.5em;
-  background: #303030;
-  border: 0.5px solid #ffffff;
+  margin-top: 2em;
+  padding: 0.5em;
+  color: #eee;
+  font-size: 1.4em;
 }
 article p {
   font-family: "Solway", serif;
   font-weight: 300;
   font-size: 0.9em;
+  line-height: 18px;
   margin: 1em;
   padding: 1.5em;
   background: #303030;
+  border-radius: 3px;
 }
 article a {
   font-family: "Major Mono Display", monospace;
+  font-size: 1.3em;
 }
 article span {
   font-family: "Solway", serif;
+  font-size: 0.9em;
 }
 footer {
   background: url(../img/ajax.svg);
@@ -105,53 +111,68 @@ footer {
   background-position: center;
   background-size: cover;
   font-family: "Major Mono Display", monospace;
-  font-size: 0.9em;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr 2fr;
   align-items: center;
   justify-items: center;
-  padding: 2em;
+  padding: 1em;
   color: #ffffff;
 }
 footer img {
   width: 100%;
 }
-.facebook {
-  width: 27px;
-}
 .copyright {
-  text-align: center;
+  font-size: 1.5em;
 }
+/* footer a {
+  justify-self: center;
+} */
 @media screen and (max-width: 1200px) {
   article {
     grid-template-columns: repeat(2, 1fr);
   }
-  footer {
-    grid-template-columns: repeat(4, 1fr);
+  section {
+    padding: 2.5%;
   }
 }
 @media screen and (max-width: 800px) {
   header {
     grid-template-columns: repeat(1, 1fr);
+    padding: 2% 20% 2% 20%;
   }
   header h1 {
+    margin-top: 0.5em;
     margin-bottom: 0.5em;
   }
   article {
     grid-template-columns: 1fr;
   }
-  footer {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  footer * {
-    padding-top: 0.6em;
-  }
   input[type="text"] {
     margin: 1em;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
   input[type="text"] {
     margin: 0.5em;
+  }
+  header {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 2% 10% 2% 10%;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2em;
+  }
+  .instagram {
+    padding-left: 2.5em;
+  }
+  .facebook {
+    padding-right: 2.5em;
+  }
+  .copyright {
+    padding: 1em;
+    font-size: 1.5em;
+    grid-column: 1 / 3;
   }
 }
