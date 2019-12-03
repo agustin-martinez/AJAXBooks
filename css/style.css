@@ -162,7 +162,7 @@ footer img {
   footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 1.4em;
+    padding: 1.5em 0 1.5em 0;
   }
   .instagram {
     padding-left: 2.5em;
@@ -172,6 +172,7 @@ footer img {
   }
   .copyright {
     padding: 1em;
+    font-size: 1.4em;
     grid-column: 1 / 3;
   }
 }
