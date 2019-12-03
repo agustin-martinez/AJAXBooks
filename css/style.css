@@ -9,6 +9,9 @@ a {
   color: #ffffff;
   font-weight: 900;
 }
+#resultDiv {
+  background: whitesmoke;
+}
 body {
   background: black;
 }
@@ -18,7 +21,7 @@ header {
   background-position: bottom;
   background-size: cover;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 2fr 1fr 2fr;
   font-family: "Major Mono Display", monospace;
   text-align: center;
   align-items: center;
@@ -27,22 +30,25 @@ header {
 }
 .title {
   font-weight: 900;
+  margin-right: 2em;
+  margin-left: 1em;
 }
 input[type="text"] {
+  min-width: 270px;
   text-align: center;
   align-items: center;
+  justify-self: center;
   font-family: "Solway", serif;
   color: #303030;
   height: 30px;
   outline: none;
-  margin: 0.6em 8em 0.6em 0em;
+  margin: 0.6em 0em 0.6em 0em;
   font-size: 14px;
 
   transition-duration: 0.2s;
   transition-timing-function: ease-in;
 
-  margin-top: 14px;
-  background: #eee;
+  background: #ffffff;
   border: 1px solid #303030bb;
   border-radius: 2px;
 }
@@ -51,6 +57,27 @@ input[type="text"] {
 .SearchTextbox {
   transition-duration: 0.2s;
   transition-timing-function: ease-in;
+}
+#addBook {
+  cursor: pointer;
+  min-width: 100px;
+  text-align: center;
+  justify-self: center;
+  font-family: "Solway", serif;
+  color: #ffffff;
+  height: 30px;
+  outline: none;
+  margin: 0 6em 0 6em;
+  font-size: 14px;
+  border: none;
+  background: #424242;
+  border: .5px solid #ffffff;
+  border-radius: 2px;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in;
+}
+#addBook:hover {
+  background: #303030;
 }
 main {
   background: url(../img/background.svg);
@@ -143,6 +170,14 @@ footer img {
   header h1 {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+  }
+  .title {
+    font-weight: 900;
+    margin-right: 0em;
+    margin-left: 0em;
+  }
+  #addBook {
+    margin: 1em;
   }
   article {
     grid-template-columns: 1fr;

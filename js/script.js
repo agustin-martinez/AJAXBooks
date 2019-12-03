@@ -1,44 +1,41 @@
-const apiUrl = 'https://opentdb.com/api.php?amount=3&category=23&difficulty=medium';
+const apiUrl = 'https://www.forverkliga.se/JavaScript/api/crud.php?key=S08Kk';
 console.log('1 Script started');
+  
+$(document).ready(() => {  // window load
+	console.log('Script started.');
+	let ajaxButton = $('#ajaxButton');
 
-window.addEventListener('load', () => {
-	console.log('2 Window load event');
-
-	// skicka request till api-servern
-	// ta hand om information vi får tillbaka
-	// visa datan på webbsidan
-	// förbättra design och CSS
-	let bert = document.querySelector('#bert');
-	bert.addEventListener('click', async e => {
-		console.log('3 Clicked on Bert');
-		// Alternativt sätt att använda fetch:
-		// fetch(apiUrl).then(response => { })
-
-		const response = await fetch(apiUrl);
-		console.log('4 Got response from server', response);
-		const data = await response.json();
-		console.log('5 JSON data is: ', data);
-
-		// kom ihåg att anropa createQuestionDOM för varje frågeobjekt
-	})
+	ajaxButton.on('click', event => {
+		const settings = {
+			method: 'GET',
+			data: {
+        key: 'value'
+			}  // ?key=value
+    };
+    
+    let url = apiUrl + '&op=select';
+		// console.log('Before AJAX');
+		let jqXHR = $.ajax(url);
+		// console.log('AJAX in progress, waiting for response');
+		jqXHR.done(onSuccess).fail(onFailure);
+		// console.log('Still waiting for response');
+	}) // ajaxButton click
 });
 
-function createQuestionDOM(question) {
-	// { question, correct_answer, incorrect_answers }
-	let questionElement = document.createElement('div');
-	questionElement.className = 'question';
-	// Alternativ: questionElement.classList
+function onSuccess(data) {
+	console.log('AJAX onSuccess. The data string is: ', data);
+	let object = JSON.parse(data);
+  console.log('The object is: ', object);
 
-	let questionHeading = document.createElement('h2');
-	questionHeading.innerText = question.question;
+  for(let i = 0; i < object.data.length;i++) {
+    console.log(object.data[i]);
+  }
 
 
+	let result = $('#resultDiv');
+	result.html('Message from server: <br>' + data.title)
+}
+function onFailure(message) {
+	console.log('AJAX onFailure', message);
 }
 
-
-
-
-
-
-
-//

@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: 900;
+}
+header {
+  background: url(../img/ajax.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: "Major Mono Display", monospace;
+  text-align: center;
+  align-items: center;
+  color: #ffffff;
+  padding: 2%;
+}
+article h2 {
+  font-family: "Solway", serif;
+  font-weight: 100;
+  color: #ffffff;
+  margin-bottom: 1em;
+}
+article h3 {
+  font-family: "Solway", serif;
+  font-weight: 100;
+  color: #ffffff;
+}
+main {
+  padding-bottom: 3em;
+}
+#form {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+#addBookToDatabase {
+  margin-top: 2em;
+  cursor: pointer;
+  min-width: 100px;
+  text-align: center;
+  justify-self: center;
+  font-family: "Solway", serif;
+  color: #ffffff;
+  height: 30px;
+  outline: none;
+  font-size: 14px;
+  border: none;
+  background: #424242;
+  border: 0.5px solid #ffffff;
+  border-radius: 2px;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in;
+}
+#addBookToDatabase:hover {
+  background: #303030;
+}
+@media screen and (max-width: 800px) {
+  header {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 2% 20% 2% 20%;
+  }
+  header h1 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+}
+@media screen and (max-width: 500px) {
+  input[type="text"] {
+    margin: 0.5em;
+  }
+  header {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 2% 10% 2% 10%;
+  }
+}
