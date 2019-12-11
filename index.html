@@ -10,7 +10,7 @@
     <link
       rel="shortcut icon"
       type="image/png"
-      href="img/ajax-icon-mini - kopia.png"
+      href="img/ajaxIcon.png"
     />
     <link rel="stylesheet" href="css/style.css" />
     <script
@@ -22,6 +22,16 @@
     <title>AJAXBooks®</title>
   </head>
   <body>
+    <div class="login-container">
+      <h1 class="title"><a href="index.html">AJAXBooks</a></h1>
+      <input id="addKeyBox" type="text" placeholder="Insert key" />
+      <button id="buttonGetKey">Do you need a key?</button>
+      <button id="buttonLetMeIn">Enter</button>
+    </div>
+    <div class="overHeader">
+      <div id="yourKey"></div>
+      <div id="errorField"></div>
+    </div>
     <header>
       <h1 class="title"><a href="">AJAXBooks</a></h1>
       <input
@@ -29,164 +39,180 @@
         placeholder="Search writers, books and more..."
         class="SearchTextBox"
       />
-      <!--       <input
-        type="submit"
-        type="submit"
-        id="site_search"
-        class="submit button"
-        name=""
-        value=""
-        aria-label="Search"
-      /> -->
-      <button id="addBook"><a href="add-book.html">Add Book</a></button>
+      <button id="addBook">Add Book</button>
     </header>
-    <main>
-      <article>
-        <section class="book1">
-          <h2>
-            “Would You Do That to Your Mother?
-          </h2>
-          <span>by Jeanne Bliss</span>
-          <img src="img/books/book1.jpg" alt="" />
-          <p>
-            With 32 case studies and examples from more than 85 companies this
-            book shows why “Make Mom Proud” companies outperform their
-            competition, and how to make this possible. A new book from Bliss,
-            it provides a five-step guide to customer experience and culture
-            transformation. Using comics and a “make-mom-proud-ometer” quiz this
-            book is as accessible as it is informative.
-          </p>
-          <span
-            >Purchase on Amazon
-            <a
-              href="https://www.amazon.com/Would-You-That-Your-Mother/dp/0735217815"
-              >here.</a
-            ></span
-          >
-        </section>
-        <section class="book2">
-          <h2>
-            “Hug Your Haters: How to Embrace Complaints and Keep Your Customers”
-          </h2>
-          <span>by Jay Baer</span>
-          <img src="img/books/book2.png" alt="" />
-          <p>
-            Jay Baer is a CX and content marketing expert, who made the
-            revolutionary statement, “Haters are not your problem. . . .
-            Ignoring them is.” This book teaches you about the two types of
-            complainers, offstage haters and onstage haters, and how to deal
-            with each group and turn bad news into good outcomes. Every solution
-            is based on case studies from businesses of all sizes, and comes
-            with a complete playbook of how to respond to customers. Plus,
-            Baer’s hilarious writing style and stories will keep you entertained
-            and informed.
-          </p>
-          <span
-            >Purchase on Amazon
-            <a
-              href="https://www.amazon.com/Hug-Your-Haters-Complaints-Customers/dp/1101980672"
-              >here.</a
-            ></span
-          >
-        </section>
-        <section class="book3">
-          <h2>
-            “The Wallet Allocation Rule”
-          </h2>
-          <span>by Timothy Keiningham, Lerzan Aksoy and Luke Williams</span>
-          <img src="img/books/book3.jpg" alt="" />
-          <p>
-            Co-authored by none other than Qualtrics’ Principal, CX Strategy and
-            Thought Leadership, Luke Williams, this book quickly became a New
-            York Times Bestseller thanks to its revolutionary approach for
-            linking brand perception and share of wallet. It addresses the fact
-            that traditional metrics like NPS and CSAT have been hard to
-            correlate with share of wallet and sets out a new approach that
-            allows organizations to calculate the precise impact of brand
-            positioning on the metric that matters most – how much consumers
-            spend with your brand.
-          </p>
-          <span
-            >Purchase on Amazon
-            <a
-              href="https://www.amazon.com/Wallet-Allocation-Rule-Winning-Battle-ebook/dp/B00T9M2VMU"
-              >here.</a
-            ></span
-          >
-        </section>
-        <section class="book4">
-          <h2>
-            “The Effortless Experience"
-          </h2>
-          <span>by Matthew Dixon, Nick Toman and Rick DeLisi</span>
-          <img src="img/books/book4.jpg" alt="" />
-          <p>
-            It is often said that the customer is always right. Turns out the
-            customer doesn’t want to be right as much as they want smooth
-            service. Dixon and his colleagues at CEB challenge customer service
-            norms and claim that loyalty is creating by proving consistent
-            service, day-in, and day-out. In addition, they provide tools and
-            templates to decrease churn, improve service, and reduce costs, so
-            you can start implementing these principles into your business right
-            away.
-          </p>
-          <span
-            >Purchase on Amazon
-            <a
-              href="https://www.amazon.com/Effortless-Experience-Conquering-Battleground-Customer/dp/1591845815"
-              >here.</a
-            ></span
-          >
-        </section>
-        <section class="book5">
-          <h2>
-            England's Hidden Reverse
-          </h2>
-          <span>by David Keenan</span>
-          <img src="img/books/book5.jpg" alt="" />
-          <p>
-            Based on several years' worth of exclusive interviews and
-            unprecedented access to all three bands' personal archives, this is
-            the first, definitive, biography of Coil, Current 93 and Nurse With
-            Wound. Together, the bands represent the real English underground in
-            all its sexual, cultural and artistic variety. A shadowy scene whose
-            work accents peculiarities of Englishness through the links and
-            affinities they've forged with earlier generations of outsiders.
-          </p>
-          <span
-            >Purchase on Amazon
-            <a
-              href="https://www.amazon.com/Englands-Hidden-Reverse-Underground-Attractor/dp/1907222170"
-              >here.</a
-            ></span
-          >
-        </section>
-        <section class="book6">
-          <h2>
-            Rip it Up and Start Again: Postpunk 1978-1984
-          </h2>
-          <span>by Simon Reynolds</span>
-          <img src="img/books/book6.jpg" alt="" />
-          <p>
-            Rip It Up and Start Again is the first book-length exploration of
-            the wildly adventurous music created in the years after punk.
-            Renowned music journalist Simon Reynolds celebrates the futurist
-            spirit of such bands as Joy Division, Gang of Four, Talking Heads,
-            and Devo, which resulted in endless innovations in music, lyrics,
-            performance, and style and continued into the early eighties with
-            the video-savvy synth-pop of groups such as Human League, Depeche
-            Mode, and Soft Cell, whose success coincided with the rise of MTV.
-          </p>
-          <span
-            >Purchase on Amazon
-            <a
-              href="https://www.amazon.com/Rip-Up-Start-Again-1978-1984/dp/0143036726"
-              >here.</a
-            ></span
-          >
-        </section>
+    <div class="headerAddBook">
+      <h1 class="title"><a id="toCollection" href="#">AJAXBooks</a></h1>
+      <input
+        type="text"
+        placeholder="Search writers, books and more..."
+        class="SearchTextBox"
+      />
+    </div>
+    <div class="index-container">
+      <div class="myCollection"><h2>• MY COLLECTION •</h2></div>
+      <div class="no-books"></div>
+      <article class="articleBooks">
       </article>
-    </main>
+      <main>
+        <div class="shop"><h2>• BOOKSTORE •</h2></div>
+        <article>
+          <section class="book1">
+            <h2>
+              “Would You Do That to Your Mother?”
+            </h2>
+            <span>by Jeanne Bliss</span>
+            <img src="img/books/book1.jpg" alt="" />
+            <p>
+              With 32 case studies and examples from more than 85 companies this
+              book shows why “Make Mom Proud” companies outperform their
+              competition, and how to make this possible. A new book from Bliss,
+              it provides a five-step guide to customer experience and culture
+              transformation. Using comics and a “make-mom-proud-ometer” quiz
+              this book is as accessible as it is informative.
+            </p>
+            <span
+              >Purchase on Amazon
+              <a
+                href="https://www.amazon.com/Would-You-That-Your-Mother/dp/0735217815"
+                >here.</a
+              ></span
+            >
+          </section>
+          <section class="book2">
+            <h2>
+              “Hug Your Haters: How to Embrace Complaints and Keep Your
+              Customers”
+            </h2>
+            <span>by Jay Baer</span>
+            <img src="img/books/book2.png" alt="" />
+            <p>
+              Jay Baer is a CX and content marketing expert, who made the
+              revolutionary statement, “Haters are not your problem. . . .
+              Ignoring them is.” This book teaches you about the two types of
+              complainers, offstage haters and onstage haters, and how to deal
+              with each group and turn bad news into good outcomes. Every
+              solution is based on case studies from businesses of all sizes,
+              and comes with a complete playbook of how to respond to customers.
+              Plus, Baer’s hilarious writing style and stories will keep you
+              entertained and informed.
+            </p>
+            <span
+              >Purchase on Amazon
+              <a
+                href="https://www.amazon.com/Hug-Your-Haters-Complaints-Customers/dp/1101980672"
+                >here.</a
+              ></span
+            >
+          </section>
+          <section class="book3">
+            <h2>
+              “The Wallet Allocation Rule”
+            </h2>
+            <span>by Timothy Keiningham, Lerzan Aksoy and Luke Williams</span>
+            <img src="img/books/book3.jpg" alt="" />
+            <p>
+              Co-authored by none other than Qualtrics’ Principal, CX Strategy
+              and Thought Leadership, Luke Williams, this book quickly became a
+              New York Times Bestseller thanks to its revolutionary approach for
+              linking brand perception and share of wallet. It addresses the
+              fact that traditional metrics like NPS and CSAT have been hard to
+              correlate with share of wallet and sets out a new approach that
+              allows organizations to calculate the precise impact of brand
+              positioning on the metric that matters most – how much consumers
+              spend with your brand.
+            </p>
+            <span
+              >Purchase on Amazon
+              <a
+                href="https://www.amazon.com/Wallet-Allocation-Rule-Winning-Battle-ebook/dp/B00T9M2VMU"
+                >here.</a
+              ></span
+            >
+          </section>
+          <section class="book4">
+            <h2>
+              “The Effortless Experience"
+            </h2>
+            <span>by Matthew Dixon, Nick Toman and Rick DeLisi</span>
+            <img src="img/books/book4.jpg" alt="" />
+            <p>
+              It is often said that the customer is always right. Turns out the
+              customer doesn’t want to be right as much as they want smooth
+              service. Dixon and his colleagues at CEB challenge customer
+              service norms and claim that loyalty is creating by proving
+              consistent service, day-in, and day-out. In addition, they provide
+              tools and templates to decrease churn, improve service, and reduce
+              costs, so you can start implementing these principles into your
+              business right away.
+            </p>
+            <span
+              >Purchase on Amazon
+              <a
+                href="https://www.amazon.com/Effortless-Experience-Conquering-Battleground-Customer/dp/1591845815"
+                >here.</a
+              ></span
+            >
+          </section>
+          <section class="book5">
+            <h2>
+              England's Hidden Reverse
+            </h2>
+            <span>by David Keenan</span>
+            <img src="img/books/book5.jpg" alt="" />
+            <p>
+              Based on several years' worth of exclusive interviews and
+              unprecedented access to all three bands' personal archives, this
+              is the first, definitive, biography of Coil, Current 93 and Nurse
+              With Wound. Together, the bands represent the real English
+              underground in all its sexual, cultural and artistic variety. A
+              shadowy scene whose work accents peculiarities of Englishness
+              through the links and affinities they've forged with earlier
+              generations of outsiders.
+            </p>
+            <span
+              >Purchase on Amazon
+              <a
+                href="https://www.amazon.com/Englands-Hidden-Reverse-Underground-Attractor/dp/1907222170"
+                >here.</a
+              ></span
+            >
+          </section>
+          <section class="book6">
+            <h2>
+              Rip it Up and Start Again: Postpunk 1978-1984
+            </h2>
+            <span>by Simon Reynolds</span>
+            <img src="img/books/book6.jpg" alt="" />
+            <p>
+              Rip It Up and Start Again is the first book-length exploration of
+              the wildly adventurous music created in the years after punk.
+              Renowned music journalist Simon Reynolds celebrates the futurist
+              spirit of such bands as Joy Division, Gang of Four, Talking Heads,
+              and Devo, which resulted in endless innovations in music, lyrics,
+              performance, and style and continued into the early eighties with
+              the video-savvy synth-pop of groups such as Human League, Depeche
+              Mode, and Soft Cell, whose success coincided with the rise of MTV.
+            </p>
+            <span
+              >Purchase on Amazon
+              <a
+                href="https://www.amazon.com/Rip-Up-Start-Again-1978-1984/dp/0143036726"
+                >here.</a
+              ></span
+            >
+          </section>
+        </article>
+      </main>
+    </div>
+    <div class="add-book-container">
+      <h2>Adding new Book</h2>
+      <h3>Title</h3>
+      <input type="text" placeholder="" id="addTitleBox" />
+      <h3>Author</h3>
+      <input type="text" placeholder="" id="addAuthorBox" />
+      <button id="buttonAddBook">Submit</button>
+    </div>
     <footer>
       <a class="instagram" href=""
         ><img src="img/social-media/instagram.svg" alt=""
@@ -196,10 +222,5 @@
       /></a>
       <a class="copyright" href=""><div>2019 AJAXBooks®</div></a>
     </footer>
-
-    <button id="ajaxButton">AJAXButton</button>
-    <div id="resultDiv">
-      We haven't asked the server yet...
-    </div>
   </body>
 </html>
