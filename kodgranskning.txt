@@ -1,0 +1,7 @@
+Daniel Bréelle Johannessons projekt
+
+bra strukturerat :)
+tydliga funktioner :)
+många console.log :)
+
+css kan bli bättre :(
