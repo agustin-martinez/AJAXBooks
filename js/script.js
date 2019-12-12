@@ -57,18 +57,6 @@ window.addEventListener("load", () => {
     });
   }
 
-/*   let deleteBookButton = document.querySelector(".deleteBook");
-  deleteBookButton.addEventListener ("click", async event => {
-    async function deleteBook() {
-      const deleteUrl = apiUrl + "key=" + myKey + "&op=delete" + "id=" + bookId;
-      const response = await fetch(deleteUrl);
-      const bookDelete = await response.json();
-      console.log(bookDelete);
-    }
-    deleteBook();
-  }); */
-
-
   buttonLetMeIn.addEventListener("click", async event => {
     let count = 0;
     async function getBooks() {
@@ -158,6 +146,19 @@ window.addEventListener("load", () => {
     header.style.display = "grid";
     headerAddBook.style.display = "none";
   });
+
+  // Delete Book
+
+/*   let deleteBookButton = document.querySelector(".deleteBook");
+  deleteBookButton.addEventListener ("click", async event => {
+    async function deleteBook(bookId) {
+      const deleteUrl = apiUrl + "key=" + myKey + "&op=delete" + "id=" + bookId;
+      const response = await fetch(deleteUrl);
+      const bookDelete = await response.json();
+      console.log(bookDelete);
+    }
+    deleteBook();
+  }); */
 
   //Create New Book
 
