@@ -46,17 +46,28 @@ window.addEventListener("load", () => {
       updatedBook.innerHTML = "Updated: " + book.updated;
       newBook.appendChild(updatedBook);
 
-      let editBook = document.createElement("img");
+/*       let editBook = document.createElement("img");
       editBook.className = "editBook";
-      newBook.appendChild(editBook);
+      newBook.appendChild(editBook); */
 
-      let deleteBook = document.createElement("img");
+      let deleteBook = document.createElement("div");
       deleteBook.className = "deleteBook";
+      deleteBook.innerHTML = "";
       newBook.appendChild(deleteBook);
     });
   }
 
-  /* ------------------------------------------------- */
+/*   let deleteBookButton = document.querySelector(".deleteBook");
+  deleteBookButton.addEventListener ("click", async event => {
+    async function deleteBook() {
+      const deleteUrl = apiUrl + "key=" + myKey + "&op=delete" + "id=" + bookId;
+      const response = await fetch(deleteUrl);
+      const bookDelete = await response.json();
+      console.log(bookDelete);
+    }
+    deleteBook();
+  }); */
+
 
   buttonLetMeIn.addEventListener("click", async event => {
     let count = 0;
@@ -129,9 +140,10 @@ window.addEventListener("load", () => {
         addAuthorBox.value;
       const response = await fetch(urlAdd);
       const data = await response.json();
+      let bookId = data.id;
       if (data.status === "success") {
         noBooks.style.display = "none";
-        createBook();
+        createBook(bookId);
       } else {
         errorField.innerHTML += " • " + data.message + " • ";
         count++;
@@ -149,7 +161,7 @@ window.addEventListener("load", () => {
 
   //Create New Book
 
-  function createBook() {
+  function createBook(bookId) {
     let articleBooks = document.querySelector(".articleBooks");
     articleBooks.className = "articleBooks";
 
@@ -172,22 +184,12 @@ window.addEventListener("load", () => {
     updatedBook.innerHTML = "Recently added";
     newBook.appendChild(updatedBook);
 
-    /*     let imgBook = document.getElementById(imgBook);
-    imgBook.className = "imgBook";
-    newBook.appendChild(imgBook); */
-
-    /*     let par = document.getElementById("par");
-    let pBook = document.createElement("p");
-    pBook.className = "pBook";
-    pBook.innerHTML = par.innerHTML;
-    newBook.appendChild(pBook); */
-
-    let editBook = document.createElement("img");
+/*     let editBook = document.createElement("div");
     editBook.className = "editBook";
-    newBook.appendChild(editBook);
-
-    let deleteBook = document.createElement("img");
+    newBook.appendChild(editBook); */
+    let deleteBook = document.createElement("div");
     deleteBook.className = "deleteBook";
+    deleteBook.value = bookId;
     newBook.appendChild(deleteBook);
   }
 
